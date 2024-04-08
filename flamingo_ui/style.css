@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#registrationContainer {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 320px;
+}
+
+#welcomeTitle {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formField {
+    margin-bottom: 10px;
+}
+
+.formField label {
+    display: block;
+}
+
+.formField input[type="text"],
+.formField input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#registerButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#registerButton:hover {
+    background-color: #0056b3;
+}
+
+#dataSourceSelector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #eee;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Data Source Selector */
+#dataSourceSelector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+#dataSourceSelector select {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Game Container & Bingo Card */
+.container {
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.bingoCard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cardItem {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cardItem.selected, .cardItem:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Buttons */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}

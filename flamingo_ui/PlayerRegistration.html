@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flamingo Bingo Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="registrationContainer">
+        <h1 id="welcomeTitle">Welcome to Flamingo Bingo</h1>
+        <div id="dataSourceSelector" style="position: absolute; top: 10px; right: 10px;">
+            <label for="dataSource">Data Source:</label>
+            <select id="dataSource">
+                <option value="mock">Mock</option>
+                <option value="customer">Customer Endpoint</option>
+            </select>
+        </div>
+        <form id="registrationForm">
+            <div class="formField">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="formField">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit" id="registerButton">Register</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

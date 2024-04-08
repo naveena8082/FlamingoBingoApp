@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flamingo Bingo Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="display: none" id="dataSourceSelector" style="position: fixed; top: 20px; right: 20px;">
+        <label for="dataSource">Data Source:</label>
+        <select  id="dataSource">
+            <option value="mock">Mock</option>
+            <option value="customer">Customer Endpoint</option>
+        </select>
+    </div>
+    <div id="gameContainer" class="container">
+        <h1>Flamingo Bingo</h1>
+        <div class="bingoCard">
+            <!-- Dynamically populated bingo card will go here -->
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
