@@ -14,7 +14,7 @@ Pay Load:
 "name": "naveena@gmail.com"
 }
 
-API Key: bmecQdyWPb6dfWlyoVgUqjcbOO4H0lW2yw7xURDi
+API Key: dummy_api_key
 
 
 Flamingo Sighting Submission API:
@@ -27,14 +27,14 @@ Pay Load:
 "region":"South America"
 }
 
-API Key:bmecQdyWPb6dfWlyoVgUqjcbOO4H0lW2yw7xURDi
+API Key: dummy_api_key
 
 Flamingo Get Card API:
 ----------------------
 
 Invoke Url :https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/getCard?email=naveena@gmail.com'
 Method : GET
-API Key:bmecQdyWPb6dfWlyoVgUqjcbOO4H0lW2yw7xURDi
+API Key:dummy_api_key
 
 
 Curl Commands to hit API:
@@ -45,7 +45,7 @@ Curl Commands to hit API:
 curl -X POST \
   'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/playerRegistration' \
   -H 'Content-Type: application/json' \
-  -H 'x-api-key: bmecQdyWPb6dfWlyoVgUqjcbOO4H0lW2yw7xURDi' \
+  -H 'x-api-key: dummy_api_key' \
   -d '{
         "email_id": "naveena@gmail.com",
         "name": "naveena@gmail.com"
@@ -57,7 +57,7 @@ curl -X POST \
 curl -X POST \
   'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/flamingoSightingSubmission' \
   -H 'Content-Type: application/json' \
-  -H 'x-api-key: bmecQdyWPb6dfWlyoVgUqjcbOO4H0lW2yw7xURDi' \
+  -H 'x-api-key: dummy_api_key' \
   -d '{
         "region":"South America"
       }'
@@ -65,7 +65,7 @@ curl -X POST \
 3.Flamingo Get Card API:
 ----------------------
 
-curl -X GET -H "x-api-key: bmecQdyWPb6dfWlyoVgUqjcbOO4H0lW2yw7xURDi" 'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/getCard?email='naveena@gmail.com'
+curl -X GET -H "x-api-key: dummy_api_key" 'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/getCard?email='naveena@gmail.com'
 
 
 UI Url:(Replace localhost with your local server)

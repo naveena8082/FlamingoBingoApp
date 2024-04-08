@@ -88,7 +88,7 @@ function fetchAndDisplayData(source, email) {
     } else {
         // Define your API Gateway endpoint and API key
         const apiEndpoint = 'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/getCard';
-        const apiKey = 'bmecQdyWPb6dfWlyoVgUqjcbOO4H0lW2yw7xURDi';
+        const apiKey = 'dummy_api_key';
         
         const urlWithParams = `${apiEndpoint}?email=${encodeURIComponent(email)}`;
 
