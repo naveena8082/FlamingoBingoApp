@@ -97,6 +97,11 @@ I will incorporate the api for player registration and flamingo sighting submiss
 I will incorporate aavtar selection option while creating the player,Display Winner of the game,Room Creation UI
 
 
+Git Command (Code resides in master branch og repo)
+-----------
+git clone -b master https://github.com/naveena8082/FlamingoBingoApp.git
+
+
 Note:
 ----
 As the main functionality of assignment is working as expected i'm submitting the assignment,I am facing dependency issues with apis and dynamo db tables while creating using CDK.
