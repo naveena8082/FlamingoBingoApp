@@ -34,7 +34,7 @@ class FlamingoBingoAppStack(Stack):
             )
         )
 
-        # Flamingo_Sighting_Submission_lambda
+        # Flamingo_Sighting_Submission_Service
 
         flamingo_sighting_create_lambda = _lambda.Function(
             self, "FlamingoSightingSubmission",
@@ -52,7 +52,7 @@ class FlamingoBingoAppStack(Stack):
         )
 
 
-        #GetFlamingoCards Service
+        #Get FlamingoCards Service
 
         get_flamingo_card_lambda = _lambda.Function(
             self, "GetFlamingoCardHandler",

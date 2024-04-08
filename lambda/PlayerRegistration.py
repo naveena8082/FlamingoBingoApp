@@ -1,7 +1,6 @@
 import boto3
 import json
 import random
-
 import time
 
 dynamodb = boto3.resource('dynamodb')

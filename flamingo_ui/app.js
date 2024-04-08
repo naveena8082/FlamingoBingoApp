@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function handleFormSubmission(event) {
     event.preventDefault();
     const email = document.getElementById('email').value;
-    const userName = document.getElementById('name').value; // Assuming you have a userName field
+    const userName = document.getElementById('name').value;
     const dataSource = document.getElementById('dataSource').value;
 
     if (dataSource === 'mock') {
@@ -20,7 +20,7 @@ function handleFormSubmission(event) {
         console.log(`Registering user with email: ${email} and name: ${userName}`);
         
         // API Gateway endpoint
-        const apiEndpoint = 'https://your-api-gateway-endpoint/endpoint'; // Replace with your actual endpoint
+        const apiEndpoint = 'https://your-api-gateway-endpoint/endpoint';
         
         // Request body
         const requestBody = {
@@ -32,7 +32,7 @@ function handleFormSubmission(event) {
         const fetchOptions = {
             method: 'POST',
             headers: {
-                'x-api-key': apiKey, // Replace 'x-api-key' if your service uses a different header for API keys
+                'x-api-key': apiKey,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(requestBody)
@@ -87,10 +87,9 @@ function fetchAndDisplayData(source, email) {
         displayData(response);
     } else {
         // Define your API Gateway endpoint and API key
-        const apiEndpoint = 'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/getBingoCard'; // Replace with your actual endpoint
-        const apiKey = 'bmecQdyWPb6dfWlyoVgUqjcbOO4H0lW2yw7xURDi'; // Replace with your actual API key
+        const apiEndpoint = 'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/getCard';
+        const apiKey = 'bmecQdyWPb6dfWlyoVgUqjcbOO4H0lW2yw7xURDi';
         
-        // Construct the URL with a query parameter for email, if needed
         const urlWithParams = `${apiEndpoint}?email=${encodeURIComponent(email)}`;
 
         // const urlWithParams = 'https://e62zz2leyg.execute-api.us-east-1.amazonaws.com/foo/card/bingo@inspiringapps.com'
@@ -99,7 +98,7 @@ function fetchAndDisplayData(source, email) {
         fetch(urlWithParams, {
             method: 'GET',
             headers: {
-                'x-api-key': apiKey, // Replace 'x-api-key' if your service uses a different header for API keys
+                'x-api-key': apiKey,
                 'Content-Type': 'application/json'
             }
             
@@ -116,7 +115,6 @@ function fetchAndDisplayData(source, email) {
         })
         .catch(error => {
             console.error('Failed to fetch data:', error);
-            // Handle errors, e.g., by displaying a message to the user
         });
     }
 }
@@ -145,15 +143,14 @@ function getMockData() {
 function displayData(data) {
     const gameContainer = document.getElementById('gameContainer');
     const bingoCardDiv = gameContainer.querySelector('.bingoCard');
-    bingoCardDiv.innerHTML = ''; // Clear existing content
+    bingoCardDiv.innerHTML = '';
 
-    // Dynamically create and append bingo card items
     data.card.forEach((item, index) => {
         const cardItem = document.createElement('div');
         cardItem.classList.add('cardItem');
         if (item === null) {
             cardItem.textContent = 'Free';
-            cardItem.classList.add('selected'); // Mark 'Free' spaces as selected
+            cardItem.classList.add('selected');
         } else {
             cardItem.textContent = item;
             if (data.completions[index]) cardItem.classList.add('selected');
@@ -164,10 +161,8 @@ function displayData(data) {
 
 function submitSelection(source, email) {
     console.log('Submitting selection for', email);
-    // Here you would normally handle submission to the server based on the source
     // For the mock path, just simulate an action like refreshing the displayed data
     if (source === 'mock') {
         alert('Mock submission complete.');
-        // For a real submission, you would call an endpoint and then refresh or update the UI based on the response
     }
 }
