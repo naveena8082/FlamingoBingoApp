@@ -1,7 +1,7 @@
 const API_ENDPOINT_PLAYER_REGISTRATION = 'https://y70hnbtaqd.execute-api.us-west-2.amazonaws.com/dev/playerRegistration';
 const API_ENDPOINT_GET_CARD = 'https://y70hnbtaqd.execute-api.us-west-2.amazonaws.com/dev/getCard';
 const API_ENDPOINT_FLAMINGO_SIGHTING = 'https://y70hnbtaqd.execute-api.us-west-2.amazonaws.com/dev/flamingoSightingSubmission';
-//please replace the API_KEY with API_KEY mentioned in email and the test
+//please replace the API_KEY with API_KEY mentioned in email and then test
 const API_KEY = 'dummy_api_key';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -94,7 +94,6 @@ function fetchAndDisplayData(source, email) {
         displayData(response);
     } else {
         const urlWithParams = `${API_ENDPOINT_GET_CARD}?email=${encodeURIComponent(email)}`;
-//        const urlWithParams= 'https://xarkclenug.execute-api.us-west-2.amazonaws.com/prod/'
 
         fetch(urlWithParams, {
             method: 'GET',

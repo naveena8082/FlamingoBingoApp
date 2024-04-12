@@ -16,13 +16,13 @@ class FlamingoBingoService(Construct):
         # table = self.create_dynamodb_table()
 
         # Lambda functions
-        player_registration_lambda = self.create_dynamodb_table(
+        player_registration_lambda = self.create_lambda_function(
             handler="PlayerRegistration.lambda_handler", description="Player Registration V2"
         )
-        flamingo_sighting_create_lambda = self.create_dynamodb_table(
+        flamingo_sighting_create_lambda = self.create_lambda_function(
             handler="FlamingoSightingSubmission.lambda_handler", description="Flamingo Sighting Submission V2"
         )
-        get_flamingo_card_lambda = self.create_dynamodb_table(
+        get_flamingo_card_lambda = self.create_lambda_function(
             handler="GetFlamingoCard.lambda_handler", description="Get Flamingo Card V2"
         )
 
@@ -56,7 +56,7 @@ class FlamingoBingoService(Construct):
             }
         )
 
-    def create_dynamodb_table(self, handler, description):
+    def create_lambda_function(self, handler, description):
         cwd = os.getcwd()
         return _lambda.Function(
             self, description.split()[0],
@@ -77,7 +77,7 @@ class FlamingoBingoService(Construct):
     def create_api_gateway(self):
         return apigateway.RestApi(
             self, "flamingo-api",
-            rest_api_name="Flamingo Services V1",
+            rest_api_name="Flamingo Services",
             description="This service serves for flamingo bingo gaming",
             default_cors_preflight_options={
                 "allow_origins": apigateway.Cors.ALL_ORIGINS,

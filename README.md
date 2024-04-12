@@ -82,7 +82,7 @@ I will incorporate the room functionality where one player can create it and sha
 I will incorporate the functionality which will determine the winner of the game 
 
 
-UI Improvments:
+UI Improvements:
 ---------------
 I will incorporate the api for player registration and flamingo sighting submission
 
