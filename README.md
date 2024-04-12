@@ -5,37 +5,31 @@ API End Points (Please make sure to hit api's with API Key Mentioned)
 
 Player Registration API:
 -----------------------
-
-Invoke Url : https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/playerRegistration
-Method : POST
+Invoke Url : https://y70hnbtaqd.execute-api.us-west-2.amazonaws.com/dev/playerRegistration
+Method : POST 
 Pay Load: 
-{
-"email_id": "naveena@gmail.com",
-"name": "naveena@gmail.com"
+{ 
+"email_id": "naveena@gmail.com", 
+"name": "naveena"
 }
-
 API Key: dummy_api_key
-
 
 Flamingo Sighting Submission API:
 --------------------------------
-
-Invoke Url : https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/flamingoSightingSubmission
+Invoke Url : https://y70hnbtaqd.execute-api.us-west-2.amazonaws.com/dev/flamingoSightingSubmission
 Method : POST
 Pay Load: 
 {
 "region":"South America"
 }
-
 API Key: dummy_api_key
+
 
 Flamingo Get Card API:
 ----------------------
-
-Invoke Url :https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/getCard?email=naveena@gmail.com'
+Invoke Url :https://y70hnbtaqd.execute-api.us-west-2.amazonaws.com/dev/getCard?email=sri@gmail.com
 Method : GET
-API Key:dummy_api_key
-
+API Key: dummy_api_key
 
 Curl Commands to hit API:
 ------------------------
@@ -43,21 +37,20 @@ Curl Commands to hit API:
 1.Player Registration API:
 -----------------------
 curl -X POST \
-  'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/playerRegistration' \
+  'https://y70hnbtaqd.execute-api.us-west-2.amazonaws.com/dev/playerRegistration' \
   -H 'Content-Type: application/json' \
-  -H 'x-api-key: dummy_api_key' \
+  -H 'x-api-key: dummy-api-key' \
   -d '{
         "email_id": "naveena@gmail.com",
-        "name": "naveena@gmail.com"
+        "name": "naveena"
       }'
-
 
 2.Flamingo Sighting Submission API:
 ----------------------------------
 curl -X POST \
-  'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/flamingoSightingSubmission' \
+  'https://y70hnbtaqd.execute-api.us-west-2.amazonaws.com/dev/flamingoSightingSubmission' \
   -H 'Content-Type: application/json' \
-  -H 'x-api-key: dummy_api_key' \
+  -H 'x-api-key: dummy-api-key' \
   -d '{
         "region":"South America"
       }'
@@ -65,8 +58,7 @@ curl -X POST \
 3.Flamingo Get Card API:
 ----------------------
 
-curl -X GET -H "x-api-key: dummy_api_key" 'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/getCard?email='naveena@gmail.com'
-
+curl -X GET -H "x-api-key:ZyohwUpy6h53vrkgdy7JM9ZTuGRkds112eIYjzjC" 'https://y70hnbtaqd.execute-api.us-west-2.amazonaws.com/dev/getCard?email=sri@gmail.com'
 
 UI Url:(Replace localhost with your local server)
 -------
@@ -104,8 +96,20 @@ git clone -b master https://github.com/naveena8082/FlamingoBingoApp.git
 
 Note:
 ----
-As the main functionality of assignment is working as expected i'm submitting the assignment,I am facing dependency issues with apis and dynamo db tables while creating using CDK.
-I was busy with office work and if i get some time i'll work on it and resubmit the assignment
+Changes Made:
+------------
+You will be now able to register player from frontend and also perform sighting submission from frontend
+
+1. Created AWS resources using aws cdk 
+2. Integrated API's in frontend for player registration and sighting submission
+3. Added alert messages
+4. Restructured the frontend and backend code
+
+
+
+
+
+
 
 
 

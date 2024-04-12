@@ -1,7 +1,8 @@
-const API_ENDPOINT_PLAYER_REGISTRATION = 'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/playerRegistration';
-const API_ENDPOINT_GET_CARD = 'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/getCard';
-const API_ENDPOINT_FLAMINGO_SIGHTING = 'https://m97t449xz5.execute-api.us-west-2.amazonaws.com/dev/flamingoSightingSubmission';
-const API_KEY = 'dummy_key';
+const API_ENDPOINT_PLAYER_REGISTRATION = 'https://y70hnbtaqd.execute-api.us-west-2.amazonaws.com/dev/playerRegistration';
+const API_ENDPOINT_GET_CARD = 'https://y70hnbtaqd.execute-api.us-west-2.amazonaws.com/dev/getCard';
+const API_ENDPOINT_FLAMINGO_SIGHTING = 'https://y70hnbtaqd.execute-api.us-west-2.amazonaws.com/dev/flamingoSightingSubmission';
+//please replace the API_KEY with API_KEY mentioned in email and the test
+const API_KEY = 'dummy_api_key';
 
 document.addEventListener('DOMContentLoaded', function() {
     const registrationForm = document.getElementById('registrationForm');
@@ -93,6 +94,7 @@ function fetchAndDisplayData(source, email) {
         displayData(response);
     } else {
         const urlWithParams = `${API_ENDPOINT_GET_CARD}?email=${encodeURIComponent(email)}`;
+//        const urlWithParams= 'https://xarkclenug.execute-api.us-west-2.amazonaws.com/prod/'
 
         fetch(urlWithParams, {
             method: 'GET',
