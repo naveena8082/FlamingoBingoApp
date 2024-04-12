@@ -42,7 +42,7 @@ class FlamingoBingoService(Construct):
     
     def create_dynamodb_table(self):
         return dynamodb.Table(
-            self, "Player",
+            self, "Players",
             partition_key=dynamodb.Attribute(name="email_id", type=dynamodb.AttributeType.STRING),
             sort_key=dynamodb.Attribute(name="created_at", type=dynamodb.AttributeType.STRING),
             billing_mode=dynamodb.BillingMode.PAY_PER_REQUEST,
